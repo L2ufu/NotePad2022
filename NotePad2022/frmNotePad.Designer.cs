@@ -87,7 +87,6 @@ namespace NotePadApp
             this.richTxtBox.TabIndex = 0;
             this.richTxtBox.Text = "";
             this.richTxtBox.WordWrap = false;
-            this.richTxtBox.TextChanged += new System.EventHandler(this.richTxtBox_TextChanged);
             // 
             // menuStrip1
             // 
@@ -123,29 +122,30 @@ namespace NotePadApp
             // создатьToolStripMenuItem
             // 
             this.создатьToolStripMenuItem.Name = "создатьToolStripMenuItem";
-            this.создатьToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.создатьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.создатьToolStripMenuItem.Text = "New";
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openToolStripMenuItem.Text = "Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click_1);
             // 
             // ToolStripMenuItem
             // 
             this.ToolStripMenuItem.Name = "ToolStripMenuItem";
-            this.ToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuItem.Text = "Save";
+            this.ToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_Click_1);
             // 
             // сохранитьToolStripMenuItem1
             // 
             this.сохранитьToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSeparator2});
             this.сохранитьToolStripMenuItem1.Name = "сохранитьToolStripMenuItem1";
-            this.сохранитьToolStripMenuItem1.Size = new System.Drawing.Size(132, 22);
+            this.сохранитьToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.сохранитьToolStripMenuItem1.Text = "Save as...";
-            this.сохранитьToolStripMenuItem1.Click += new System.EventHandler(this.сохранитьToolStripMenuItem1_Click);
             // 
             // toolStripSeparator2
             // 
@@ -155,29 +155,29 @@ namespace NotePadApp
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(129, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
             // 
             // параметрыСтраницыToolStripMenuItem
             // 
             this.параметрыСтраницыToolStripMenuItem.Name = "параметрыСтраницыToolStripMenuItem";
-            this.параметрыСтраницыToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.параметрыСтраницыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.параметрыСтраницыToolStripMenuItem.Text = "Page setup";
             // 
             // печатьToolStripMenuItem
             // 
             this.печатьToolStripMenuItem.Name = "печатьToolStripMenuItem";
-            this.печатьToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.печатьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.печатьToolStripMenuItem.Text = "Print";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(129, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(177, 6);
             // 
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.выходToolStripMenuItem.Text = "Exit";
             // 
             // впвапваToolStripMenuItem
@@ -200,14 +200,12 @@ namespace NotePadApp
             this.впвапваToolStripMenuItem.Name = "впвапваToolStripMenuItem";
             this.впвапваToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.впвапваToolStripMenuItem.Text = "Format";
-            this.впвапваToolStripMenuItem.Click += new System.EventHandler(this.впвапваToolStripMenuItem_Click);
             // 
             // отменитьToolStripMenuItem
             // 
             this.отменитьToolStripMenuItem.Name = "отменитьToolStripMenuItem";
             this.отменитьToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.отменитьToolStripMenuItem.Text = "Undo";
-            this.отменитьToolStripMenuItem.Click += new System.EventHandler(this.отменитьToolStripMenuItem_Click);
             // 
             // cutToolStripMenuItem
             // 
@@ -299,7 +297,6 @@ namespace NotePadApp
             this.WordWarpToolStripMenuItem.Name = "WordWarpToolStripMenuItem";
             this.WordWarpToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.WordWarpToolStripMenuItem.Text = "Word Wrap";
-            this.WordWarpToolStripMenuItem.Click += new System.EventHandler(this.переносСоСловамиToolStripMenuItem_Click);
             // 
             // fontToolStripMenuItem
             // 
@@ -315,7 +312,6 @@ namespace NotePadApp
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.viewToolStripMenuItem.Text = "View";
-            this.viewToolStripMenuItem.Click += new System.EventHandler(this.viewToolStripMenuItem_Click);
             // 
             // zoomToolStripMenuItem
             // 
@@ -374,7 +370,6 @@ namespace NotePadApp
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmNotePad";
             this.Text = "NotePad";
-            this.Load += new System.EventHandler(this.frmNotePad_Load_1);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

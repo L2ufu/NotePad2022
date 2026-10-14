@@ -9,7 +9,10 @@ namespace NotePadApp
             InitializeComponent();
         }
 
-        private void ToolStripMenuItem_Click(object sender, EventArgs e)
+       
+
+
+        private void ToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -18,9 +21,10 @@ namespace NotePadApp
                     writer.Write(richTxtBox.Text);
                 }
             }
+
         }
 
-        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        private void openToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -29,45 +33,6 @@ namespace NotePadApp
                     richTxtBox.Text = reader.ReadToEnd();
                 }
             }
-        }
-
-        private void frmNotePad_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void впвапваToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void viewToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void сохранитьToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void отменитьToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void переносСоСловамиToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmNotePad_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void richTxtBox_TextChanged(object sender, EventArgs e)
-        {
 
         }
     }
